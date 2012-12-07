@@ -1,3 +1,5 @@
 string 'My Blog' (length=7)
 string 'First post' (length=10)
 string 'This is my very first post.' (length=27)
+string 'Second post' (length=11)
+string 'Yet another post.' (length=17)

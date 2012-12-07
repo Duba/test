@@ -1,14 +1,13 @@
 <?php
-include('b4.php');
+include('d4.php');
 
 $steven = new Author('Steven');
 $aAuthor = new Author('Other');
 
 $blog1 = new Blog($steven);
-$blog2 = new Blog($aAuthor);
+$blog1->addAuthor($aAuthor);
 
 $blog1->setTitle('My Blog');
-$blog2->setTitle('My Blog 2');
 
 $blog1->addPost(
 	new Post($steven, 'First post', 'This is my very first post.')

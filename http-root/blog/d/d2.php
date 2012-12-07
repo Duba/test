@@ -13,9 +13,14 @@ class Blog {
 	private $owner = null;
 
 	/**
-	 * @var array
+	 * @var Post[]
 	 */
 	private $posts = array();
+
+	/**
+	 * @var Author[]
+	 */
+	private $authors = array();
 
 	/**
 	 * @param Author $owner
@@ -49,15 +54,34 @@ class Blog {
 	 * @param Post $post
 	 */
 	public function addPost(Post $post) {
-		if($post->getAuthor() === $this->getOwner()) {
+		if($this->isAllowedToPost($post->getAuthor())) {
 			$this->posts[] = $post;
 		}
 	}
 
 	/**
-	 * @return array
+	 * @return Post[]
 	 */
 	public function getPosts() {
 		return $this->posts;
+	}
+
+	/**
+	 * @param Author $author
+	 */
+	public function addAuthor(Author $author) {
+		$this->authors[] = $author;
+	}
+
+	/**
+	 * @param Author $author
+	 * @return bool
+	 */
+	private function isAllowedToPost(Author $author) {
+		$result = false;
+		if($author === $this->getOwner() || in_array($author, $this->authors)) {
+			$result = true;
+		}
+		return $result;
 	}
 }
