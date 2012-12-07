@@ -75,6 +75,16 @@ class Blog {
 
 	/**
 	 * @param Author $author
+	 */
+	public function removeAuthor(Author $author) {
+		$key = array_search($author, $this->authors);
+		if($key !== false) {
+			unset($this->authors[$key]);
+		}
+	}
+
+	/**
+	 * @param Author $author
 	 * @return bool
 	 */
 	private function isAllowedToPost(Author $author) {
@@ -83,5 +93,20 @@ class Blog {
 			$result = true;
 		}
 		return $result;
+	}
+
+	/**
+	 * outputs a blog
+	 */
+	public function display() {
+		var_dump($this->getTitle());
+
+		$posts = $this->getPosts();
+		foreach($posts as $post) {
+			var_dump(
+				$post->getHeading(),
+				$post->getBody()
+			);
+		}
 	}
 }
