@@ -49,7 +49,7 @@ class Blog {
 	 * @param Post $post
 	 */
 	public function addPost(Post $post) {
-		if($post->getAuthor() === $this->getOwner()) {
+		if ($post->getAuthor() === $this->getOwner()) {
 			$this->posts[] = $post;
 		}
 	}

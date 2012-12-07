@@ -8,7 +8,7 @@ spl_autoload_register(function ($class) {
 		'Comment' => '/f4.php'
 	);
 
-	if(isset($map[$class])) {
+	if (isset($map[$class])) {
 		include(__DIR__ . $map[$class]);
 	}
 });

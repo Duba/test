@@ -54,7 +54,7 @@ class Blog {
 	 * @param Post $post
 	 */
 	public function addPost(Post $post) {
-		if($this->isAllowedToPost($post->getAuthor())) {
+		if ($this->isAllowedToPost($post->getAuthor())) {
 			$this->posts[] = $post;
 		}
 	}
@@ -79,7 +79,7 @@ class Blog {
 	 */
 	private function isAllowedToPost(Author $author) {
 		$result = false;
-		if($author === $this->getOwner() || in_array($author, $this->authors)) {
+		if ($author === $this->getOwner() || in_array($author, $this->authors)) {
 			$result = true;
 		}
 		return $result;

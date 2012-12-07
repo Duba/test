@@ -72,7 +72,7 @@ class User {
 	 * @return string
 	 */
 	public function getScreenName() {
-		if(!$this->screenName) {
+		if (!$this->screenName) {
 			$screenName = $this->getRealName();
 		} else {
 			$screenName = $this->screenName;

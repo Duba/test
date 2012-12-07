@@ -6,7 +6,7 @@ spl_autoload_register(function ($class) {
 		'Blog' => '/a2.php'
 	);
 
-	if(isset($map[$class])) {
+	if (isset($map[$class])) {
 		include(__DIR__ . $map[$class]);
 	}
 });

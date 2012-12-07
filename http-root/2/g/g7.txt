@@ -1,0 +1,8 @@
+string 'Title' (length=5)
+string 'First post' (length=10)
+string 'This is my very first post.' (length=27)
+string 'Comment 1' (length=9)
+string 'Second post' (length=11)
+string 'This is my second post.' (length=23)
+string 'Comment 2' (length=9)
+string 'Comment 3' (length=9)

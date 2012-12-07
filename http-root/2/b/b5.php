@@ -18,7 +18,7 @@ $blog->addPost(
 var_dump($blog->getTitle());
 
 $posts = $blog->getPosts();
-foreach($posts as $post) {
+foreach ($posts as $post) {
 	var_dump(
 		$post->getHeading(),
 		$post->getBody()

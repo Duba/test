@@ -54,7 +54,7 @@ class Blog {
 	 * @param Post $post
 	 */
 	public function addPost(Post $post) {
-		if($this->isAllowedToPost($post->getAuthor())) {
+		if ($this->isAllowedToPost($post->getAuthor())) {
 			$this->posts[] = $post;
 		}
 	}
@@ -78,7 +78,7 @@ class Blog {
 	 */
 	public function removeAuthor(Author $author) {
 		$key = array_search($author, $this->authors);
-		if($key !== false) {
+		if ($key !== false) {
 			unset($this->authors[$key]);
 		}
 	}
@@ -89,7 +89,7 @@ class Blog {
 	 */
 	private function isAllowedToPost(Author $author) {
 		$result = false;
-		if($author === $this->getOwner() || in_array($author, $this->authors)) {
+		if ($author === $this->getOwner() || in_array($author, $this->authors)) {
 			$result = true;
 		}
 		return $result;
@@ -102,15 +102,15 @@ class Blog {
 		var_dump($this->getTitle());
 
 		$posts = $this->getPosts();
-		foreach($posts as $post) {
+		foreach ($posts as $post) {
 			var_dump(
 				$post->getHeading(),
 				$post->getBody()
 			);
 
 			$comments = $post->getComments();
-			foreach($comments as $comment) {
-				var_dump($comment->getText());
+			foreach ($comments as $comment) {
+				$comment->display();
 			}
 		}
 	}

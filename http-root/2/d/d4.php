@@ -7,7 +7,7 @@ spl_autoload_register(function ($class) {
 		'Post' => '/d3.php'
 	);
 
-	if(isset($map[$class])) {
+	if (isset($map[$class])) {
 		include(__DIR__ . $map[$class]);
 	}
 });
