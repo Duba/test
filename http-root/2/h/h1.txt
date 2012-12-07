@@ -1,0 +1,1 @@
+Um eine Freigabe der Kommentare zu realisieren würde ich der die Klasse Comment um eine Eigenschaft isApproved und ggf. Getter und Setter für diese erweitern. Bei der Ausgabe des Blogs würde ich diese Eigenschaft auf wahr überprüfen wenn der Autor ungleich dem Autor des Posts ist, den ich an dieser Stelle kenne.
