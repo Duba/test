@@ -1,7 +1,4 @@
 <?php
-ini_set('error_reporting', -1);
-ini_set('display_errors', 'stdout');
-
 include('a3.php');
 
 $author = new Author('Steven');

@@ -13,7 +13,7 @@ class Blog {
 	private $owner = null;
 
 	/**
-	 * @var array
+	 * @var Post[]
 	 */
 	private $posts = array();
 
