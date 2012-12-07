@@ -46,14 +46,4 @@ class Comment {
 	public function getComments() {
 		return $this->comments;
 	}
-
-	/**
-	 * displays comments recursive
-	 */
-	public function display() {
-		var_dump($this->getText());
-		foreach ($this->comments as $comment) {
-			$comment->display();
-		}
-	}
 }

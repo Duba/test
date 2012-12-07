@@ -109,9 +109,17 @@ class Blog {
 			);
 
 			$comments = $post->getComments();
-			foreach ($comments as $comment) {
-				$comment->display();
-			}
+			$this->displayComments($comments);
+		}
+	}
+
+	/**
+	 * @param $comments
+	 */
+	private function displayComments($comments) {
+		foreach ($comments as $comment) {
+			var_dump($comment->getText());
+			$this->displayComments($comment->getComments());
 		}
 	}
 }
