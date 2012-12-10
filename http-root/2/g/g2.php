@@ -114,9 +114,9 @@ class Blog {
 	}
 
 	/**
-	 * @param $comments
+	 * @param Comments[] $comments
 	 */
-	private function displayComments($comments) {
+	private function displayComments(array $comments) {
 		foreach ($comments as $comment) {
 			var_dump($comment->getText());
 			$this->displayComments($comment->getComments());

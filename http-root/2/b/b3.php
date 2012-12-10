@@ -48,5 +48,4 @@ class Post {
 	public function getHeading() {
 		return $this->heading;
 	}
-
 }

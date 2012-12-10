@@ -55,7 +55,7 @@ class Blog {
 	}
 
 	/**
-	 * @return array
+	 * @return Post[]
 	 */
 	public function getPosts() {
 		return $this->posts;

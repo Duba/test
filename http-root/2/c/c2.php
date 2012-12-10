@@ -13,7 +13,7 @@ class Blog {
 	private $owner = null;
 
 	/**
-	 * @var array
+	 * @var Post[]
 	 */
 	private $posts = array();
 
@@ -55,7 +55,7 @@ class Blog {
 	}
 
 	/**
-	 * @return array
+	 * @return Post[]
 	 */
 	public function getPosts() {
 		return $this->posts;
