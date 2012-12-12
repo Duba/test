@@ -22,15 +22,15 @@ class ISBN {
 	public function __construct($string) {
 		$this->isbn = preg_split('/[\s-]+/', $string);
 
-		if(!$this->isPrefixValid()) {
+		if (!$this->isPrefixValid()) {
 			throw new InvalidArgumentException(sprintf('%s is not a valid iban: prefix check failed', $string));
 		}
 
-		if(!$this->isGroupValid()) {
+		if (!$this->isGroupValid()) {
 			throw new InvalidArgumentException(sprintf('%s is not a valid iban: group check failed', $string));
 		}
 
-		if(!$this->isChecksumValid()) {
+		if (!$this->isChecksumValid()) {
 			throw new InvalidArgumentException(sprintf('%s is not a valid iban: cecksum check failed', $string));
 		}
 	}
@@ -77,7 +77,7 @@ class ISBN {
 		$isValid = false;
 		$group = $this->getGroup();
 
-		switch(mb_strlen($group)) {
+		switch (mb_strlen($group)) {
 			case 1:
 				$isValid = (($group >= 0 && $group <= 5) || ($group == 7));
 				break;

@@ -21,7 +21,7 @@ class ISBN {
 	 */
 	public function __construct($string) {
 		$this->isbn = preg_split('/[\s-]+/', $string);
-		if(!$this->isPrefixValid()) {
+		if (!$this->isPrefixValid()) {
 			throw new InvalidArgumentException(sprintf('%s is not a valid iban.', $string));
 		}
 	}
@@ -43,7 +43,7 @@ class ISBN {
 	/**
 	 * @return bool
 	 */
-	private function isPrefixValid(){
+	private function isPrefixValid() {
 		return in_array($this->getPrefix(), array(978, 979));
 	}
 }

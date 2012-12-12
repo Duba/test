@@ -19,7 +19,7 @@ class Analyzer {
 		try {
 			$aISBN = new ISBN($isbn);
 			$this->validIsbns[] = $isbn;
-		} catch(InvalidArgumentException $e) {
+		} catch (InvalidArgumentException $e) {
 			$this->invalidIsbns[] = $isbn;
 		}
 	}
