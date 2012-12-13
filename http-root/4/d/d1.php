@@ -143,4 +143,12 @@ class URL {
 		}
 		return $diff;
 	}
+
+	/**
+	 * @param string $path
+	 * @return string
+	 */
+	public function getURLStringForSubpath($path) {
+		return $this . '/' . $path;
+	}
 }
